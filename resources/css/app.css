@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==== Global Glassy Dark Theme Styling ==== */
+body {
+    @apply bg-gradient-to-br from-black via-slate-900 to-indigo-950 text-indigo-100 font-sans leading-relaxed antialiased;
+    @apply min-h-screen bg-gradient-to-br from-black via-slate-900 to-indigo-950 text-indigo-100;
+}
+
+/* ==== Typography ==== */
+h1,
+h2,
+h3,
+h4 {
+    @apply font-bold text-cyan-300 tracking-wide;
+}
+
+a {
+    @apply text-sky-400 hover:text-sky-300 underline transition duration-200 ease-in-out;
+}
+
+/* ==== Form Elements ==== */
+.form-label {
+    @apply block text-indigo-300 font-medium mb-2;
+}
+
+.form-input,
+.form-textarea,
+.form-input-file {
+    @apply w-full px-4 py-2 rounded-lg bg-slate-800/60 border border-slate-600 text-white text-sm backdrop-blur-md transition focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    @apply text-slate-400;
+}
+
+/* ==== Buttons ==== */
+.btn-primary {
+    @apply bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-5 py-2 rounded-lg font-semibold shadow hover:from-sky-600 hover:to-indigo-600 transition duration-200;
+}
+
+/* ==== Reusable Buttons ==== */
+.btn {
+    @apply inline-block px-4 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow-md hover:bg-indigo-700 transition;
+}
+
+.btn-outline {
+    @apply border border-lime-500 text-lime-400 px-4 py-2 rounded hover:bg-lime-950 text-sm font-medium transition;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+    @apply bg-slate-900/80 backdrop-blur border-b border-slate-700 shadow-sm;
+}
+
+.navbar-link {
+    @apply text-indigo-200 hover:text-white px-4 py-2 rounded transition text-sm font-medium;
+}
+
+.navbar-link-active {
+    @apply text-cyan-300 font-semibold;
+}
+
+/* ==== Cards / Boxes ==== */
+.card {
+    @apply bg-slate-800/70 backdrop-blur-md p-6 rounded-2xl shadow hover:shadow-lg transition duration-300 border border-slate-700;
+}
+
+.card-title {
+    @apply text-lg font-semibold text-sky-300 mb-2;
+}
+
+.card-text {
+    @apply text-indigo-200 text-sm;
+}
+
+/* ==== Profile Image ==== */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 2px solid #38bdf8;
+    /* sky-400 */
+}
+
+/* ==== Footer ==== */
+.footer {
+    @apply bg-slate-900/90 text-indigo-400 text-sm text-center py-6 border-t border-slate-700;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 640px) {
+    .navbar-link {
+        @apply block px-4 py-2;
+    }
+}
